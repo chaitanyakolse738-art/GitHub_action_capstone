@@ -21,3 +21,6 @@ jobs:
               run: |
                   echo "PR checks passed for branch ${{ github.head_ref }}"
 
+            - name: print text
+              run: |
+                    echo "This is a PR check for branch ${{ github.head_ref }}"
