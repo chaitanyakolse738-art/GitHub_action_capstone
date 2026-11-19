@@ -17,8 +17,10 @@ jobs:
         uses: ./.github/workflows/reusable-docker.yml
         with:
           image_name: devops-health-api
-        secrets: inherit
-          
+        secrets: 
+          docker_username: ${{ secrets.DOCKER_USERNAME }}
+          docker_token: ${{ secrets.DOCKER_TOKEN }}
+        
      
     deploy:
        needs: docker-build-and-push
