@@ -32,3 +32,8 @@ jobs:
                     echo "FAIL: Endpoint returned HTTP $STATUS"
                     exit 1
                 fi
+
+            - name: Stop and remove the container
+              run: |
+                docker stop my-app
+                docker rm my-app
