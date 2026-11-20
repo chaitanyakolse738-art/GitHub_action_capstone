@@ -16,7 +16,7 @@ jobs:
         needs: build-and-test
         uses: ./.github/workflows/reusable-docker.yml
         with:
-          image_name: ${{ secrets.DOCKERHUB_USERNAME }}/devops-health-api
+          image_name: chaitanya057/devops-health-api
         secrets: 
           docker_username: ${{ secrets.DOCKERHUB_USERNAME }}
           docker_token: ${{ secrets.DOCKERHUB_TOKEN }}
